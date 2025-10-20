@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio & Digital Products</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc; /* Slate 50 */
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #1e293b; /* Slate 800 */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .contact-button {
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .contact-button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900 shadow-xl sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-teal-400 tracking-wider">
+                &lt;Dev / Store&gt;
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#apps" class="text-gray-300 hover:text-teal-400 transition duration-150 font-medium">My Apps & Services</a>
+                <a href="#digital" class="text-gray-300 hover:text-teal-400 transition duration-150 font-medium">Digital Products</a>
+                <a href="#contact-info" class="text-teal-400 hover:text-teal-200 transition duration-150 font-medium border-b-2 border-teal-400">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-teal-400 focus:outline-none">
+                <!-- Hamburger Icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-lg fixed inset-x-0 top-16 z-40">
+        <a href="#apps" class="block py-3 px-4 text-gray-200 hover:bg-teal-700 transition duration-150 border-b border-gray-700">My Apps & Services</a>
+        <a href="#digital" class="block py-3 px-4 text-gray-200 hover:bg-teal-700 transition duration-150 border-b border-gray-700">Digital Products</a>
+        <a href="#contact-info" class="block py-3 px-4 text-teal-400 hover:bg-teal-700 transition duration-150">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- Introduction Banner -->
+        <section class="text-center py-16 bg-gray-800 rounded-3xl shadow-2xl">
+            <h2 class="text-5xl font-extrabold text-white mb-4">
+                Your Vision. Our Code.
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                I specialize in high-quality **Android, iOS, and Smart TV app development**, complemented by a curated selection of premium digital assets.
+            </p>
+            <a href="#apps" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-gray-900 bg-teal-400 hover:bg-teal-300 md:py-4 md:text-lg md:px-10 shadow-lg transform hover:scale-105 transition duration-300">
+                Explore Services
+            </a>
+        </section>
+
+        <!-- Category 1: My Apps & Development Services -->
+        <section id="apps">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-teal-400 mb-2">My Apps & Services</h3>
+                <p class="text-gray-400 text-lg">Cross-platform development expertise for mobile and TV devices.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Product Card: iOS Mobile App Development -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-5xl mb-4 text-teal-400">
+                        <!-- iOS Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-apple"><path d="M12 20.94c-2.7 0-4.94-2.24-4.94-4.94 0-2.7 2.24-4.94 4.94-4.94 2.7 0 4.94 2.24 4.94 4.94 0 2.7-2.24 4.94-4.94 4.94z"/><path d="M12 21a9 9 0 0 0 9-9c0-5-4-9-9-9-5 0-9 4-9 9a9 9 0 0 0 9 9z"/><path d="M12 20.94V16"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-white">iOS Mobile App Development</h4>
+                    <p class="text-gray-400 mb-6 text-sm">Custom application development for iPhone and iPad, focusing on Swift/SwiftUI and native performance.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-300 font-medium italic">Price: Discuss</span>
+                        <button onclick="showContactMessage('iOS Mobile App')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
+                            Contact for Price
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card: Android Mobile App Development -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-5xl mb-4 text-teal-400">
+                        <!-- Android Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot"><path d="M12 8V4"/><path d="M12 12V8"/><path d="M16 12V8"/><path d="M8 12V8"/><rect x="2" y="12" width="20" height="10" rx="4"/><path d="M10 16h4"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Android Mobile App Development</h4>
+                    <p class="text-gray-400 mb-6 text-sm">Building scalable and reliable native Android apps using Kotlin or Java, ensuring broad device compatibility.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-300 font-medium italic">Price: Discuss</span>
+                        <button onclick="showContactMessage('Android Mobile App')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
+                            Contact for Price
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card: Smart TV App Development -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-5xl mb-4 text-teal-400">
+                        <!-- TV Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><path d="m17 2-5 5-5-5"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-white">Android/iOS TV Apps (e.g., Apple TV, Android TV)</h4>
+                    <p class="text-gray-400 mb-6 text-sm">Creating stunning large-screen video and media applications optimized for 10-foot interfaces.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-300 font-medium italic">Price: Discuss</span>
+                        <button onclick="showContactMessage('Smart TV App')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
+                            Contact for Price
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="border-t border-gray-700 my-16"></div>
+
+        <!-- Category 2: Digital Products -->
+        <section id="digital">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-teal-400 mb-2">Curated Digital Products</h3>
+                <p class="text-gray-400 text-lg">Premium accounts and services for passive income and digital lifestyle.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Product Card: Amazon Merch Account -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-4xl mb-3 text-teal-400">
+                        <!-- Shopping Cart Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.72a2 2 0 0 0 2-1.58L23 6H6"/></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Merch by Amazon Accounts</h4>
+                    <p class="text-gray-400 mb-4 text-sm">Tiered, established accounts ready for t-shirt and apparel design sales.</p>
+                    <button onclick="showContactMessage('Amazon Merch Account')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                        Contact for Price
+                    </button>
+                </div>
+
+                <!-- Product Card: Etsy Account -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-4xl mb-3 text-teal-400">
+                        <!-- Store Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.42 2h9.16a2 2 0 0 1 1.41.59L22 7"/><path d="M2 7v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7"/><path d="M15 10a3 3 0 1 0 0 6"/><path d="M6 10h4"/></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Etsy Shop Accounts</h4>
+                    <p class="text-gray-400 mb-4 text-sm">Aged and verified Etsy seller accounts for instant digital product launch.</p>
+                    <button onclick="showContactMessage('Etsy Account')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                        Contact for Price
+                    </button>
+                </div>
+
+                <!-- Product Card: Spotify Premium -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-4xl mb-3 text-teal-400">
+                        <!-- Music Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headset"><path d="M14 19a7 7 0 0 0-14 0"/><path d="M12 19a1 1 0 0 1 1 1v2h-2v-2a1 1 0 0 1 1-1z"/><path d="M22 19h-2v-2a10 10 0 0 0-20 0v2H2"/><path d="M14 10V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Spotify Premium Subscriptions</h4>
+                    <p class="text-gray-400 mb-4 text-sm">Long-term, shared access to ad-free music and offline listening features.</p>
+                    <button onclick="showContactMessage('Spotify Premium')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                        Contact for Price
+                    </button>
+                </div>
+
+                <!-- Product Card: Netflix Premium -->
+                <div class="card p-6 rounded-2xl shadow-lg border border-teal-600/30">
+                    <div class="text-4xl mb-3 text-teal-400">
+                        <!-- Video Icon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="12" x2="12" y1="17" y2="21"/><line x1="8" x2="16" y1="21" y2="21"/></svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Netflix Premium Access</h4>
+                    <p class="text-gray-400 mb-4 text-sm">Ultra HD 4K streaming access for multiple devices (shared profile access).</p>
+                    <button onclick="showContactMessage('Netflix Premium')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                        Contact for Price
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Dynamic Message Box -->
+        <div id="message-box" class="fixed bottom-4 right-4 bg-teal-600 text-white p-4 rounded-xl shadow-2xl transition-all duration-300 transform translate-x-full opacity-0 max-w-sm z-50">
+            <p id="message-text" class="font-medium"></p>
+            <p class="text-sm mt-1 text-teal-100">Please reach out via email for accurate pricing and details.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer & Contact Information -->
+    <footer id="contact-info" class="bg-gray-900 py-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-2xl font-bold mb-4 text-teal-400">Ready to talk business?</h4>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400">
+                <!-- UPDATED EMAIL -->
+                <a href="mailto:ramoxplydev@gmail.com" class="hover:text-teal-400 transition duration-150 flex items-center">
+                    <!-- Email Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.83 1.83 0 0 1-2.06 0L2 7"/></svg>
+                    ramoxplydev@gmail.com
+                </a>
+                <!-- UPDATED PHONE/WHATSAPP LINK -->
+                <a href="https://wa.me/212643489099" target="_blank" class="hover:text-teal-400 transition duration-150 flex items-center">
+                    <!-- Phone Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +212 643489099 (WhatsApp)
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-gray-600">© 2025 Developer Storefront. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to show a temporary contact message
+        function showContactMessage(productName) {
+            const messageBox = document.getElementById('message-box');
+            const messageText = document.getElementById('message-text');
+
+            messageText.textContent = `Inquiry received for: ${productName}.`;
+
+            // Display the message box with a slide-in effect
+            messageBox.classList.remove('translate-x-full', 'opacity-0');
+            messageBox.classList.add('translate-x-0', 'opacity-100');
+
+            // Hide the message box after 4 seconds
+            setTimeout(() => {
+                messageBox.classList.remove('translate-x-0', 'opacity-100');
+                messageBox.classList.add('translate-x-full', 'opacity-0');
+            }, 4000);
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Placeholder for Firebase initialization (Mandatory inclusion for the environment)
+        // Note: Firestore is not used as this is a static informational site.
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        console.log(`App ID: ${appId}`);
+        if (firebaseConfig) {
+            console.log("Firebase Config loaded.");
+        }
+        if (initialAuthToken) {
+            console.log("Initial Auth Token available.");
+        }
+    </script>
+</body>
+</html>
