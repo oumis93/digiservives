@@ -92,7 +92,8 @@
                     <p class="text-gray-400 mb-6 text-sm">Custom application development for iPhone and iPad, focusing on Swift/SwiftUI and native performance.</p>
                     <div class="flex items-center justify-between">
                         <span class="text-gray-300 font-medium italic">Price: Discuss</span>
-                        <button onclick="showContactMessage('iOS Mobile App')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
+                        <!-- UPDATED: Direct WhatsApp link -->
+                        <button onclick="contactViaWhatsApp('iOS Mobile App Development')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
                             Contact for Price
                         </button>
                     </div>
@@ -108,7 +109,8 @@
                     <p class="text-gray-400 mb-6 text-sm">Building scalable and reliable native Android apps using Kotlin or Java, ensuring broad device compatibility.</p>
                     <div class="flex items-center justify-between">
                         <span class="text-gray-300 font-medium italic">Price: Discuss</span>
-                        <button onclick="showContactMessage('Android Mobile App')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
+                        <!-- UPDATED: Direct WhatsApp link -->
+                        <button onclick="contactViaWhatsApp('Android Mobile App Development')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
                             Contact for Price
                         </button>
                     </div>
@@ -124,7 +126,8 @@
                     <p class="text-gray-400 mb-6 text-sm">Creating stunning large-screen video and media applications optimized for 10-foot interfaces.</p>
                     <div class="flex items-center justify-between">
                         <span class="text-gray-300 font-medium italic">Price: Discuss</span>
-                        <button onclick="showContactMessage('Smart TV App')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
+                        <!-- UPDATED: Direct WhatsApp link -->
+                        <button onclick="contactViaWhatsApp('Smart TV App Development')" class="contact-button bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-xl shadow-md">
                             Contact for Price
                         </button>
                     </div>
@@ -152,7 +155,8 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-2 text-white">Merch by Amazon Accounts</h4>
                     <p class="text-gray-400 mb-4 text-sm">Tiered, established accounts ready for t-shirt and apparel design sales.</p>
-                    <button onclick="showContactMessage('Amazon Merch Account')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                    <!-- UPDATED: Direct WhatsApp link -->
+                    <button onclick="contactViaWhatsApp('Merch by Amazon Accounts')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
                         Contact for Price
                     </button>
                 </div>
@@ -165,7 +169,8 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-2 text-white">Etsy Shop Accounts</h4>
                     <p class="text-gray-400 mb-4 text-sm">Aged and verified Etsy seller accounts for instant digital product launch.</p>
-                    <button onclick="showContactMessage('Etsy Account')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                    <!-- UPDATED: Direct WhatsApp link -->
+                    <button onclick="contactViaWhatsApp('Etsy Shop Accounts')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
                         Contact for Price
                     </button>
                 </div>
@@ -178,7 +183,8 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-2 text-white">Spotify Premium Subscriptions</h4>
                     <p class="text-gray-400 mb-4 text-sm">Long-term, shared access to ad-free music and offline listening features.</p>
-                    <button onclick="showContactMessage('Spotify Premium')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                    <!-- UPDATED: Direct WhatsApp link -->
+                    <button onclick="contactViaWhatsApp('Spotify Premium Subscriptions')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
                         Contact for Price
                     </button>
                 </div>
@@ -191,19 +197,16 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-2 text-white">Netflix Premium Access</h4>
                     <p class="text-gray-400 mb-4 text-sm">Ultra HD 4K streaming access for multiple devices (shared profile access).</p>
-                    <button onclick="showContactMessage('Netflix Premium')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
+                    <!-- UPDATED: Direct WhatsApp link -->
+                    <button onclick="contactViaWhatsApp('Netflix Premium Access')" class="contact-button w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 rounded-xl shadow-md mt-4">
                         Contact for Price
                     </button>
                 </div>
 
             </div>
         </section>
-
-        <!-- Dynamic Message Box -->
-        <div id="message-box" class="fixed bottom-4 right-4 bg-teal-600 text-white p-4 rounded-xl shadow-2xl transition-all duration-300 transform translate-x-full opacity-0 max-w-sm z-50">
-            <p id="message-text" class="font-medium"></p>
-            <p class="text-sm mt-1 text-teal-100">Please reach out via email for accurate pricing and details.</p>
-        </div>
+        
+        <!-- Removed Dynamic Message Box HTML -->
 
     </main>
 
@@ -230,22 +233,12 @@
     </footer>
 
     <script>
-        // Function to show a temporary contact message
-        function showContactMessage(productName) {
-            const messageBox = document.getElementById('message-box');
-            const messageText = document.getElementById('message-text');
-
-            messageText.textContent = `Inquiry received for: ${productName}.`;
-
-            // Display the message box with a slide-in effect
-            messageBox.classList.remove('translate-x-full', 'opacity-0');
-            messageBox.classList.add('translate-x-0', 'opacity-100');
-
-            // Hide the message box after 4 seconds
-            setTimeout(() => {
-                messageBox.classList.remove('translate-x-0', 'opacity-100');
-                messageBox.classList.add('translate-x-full', 'opacity-0');
-            }, 4000);
+        // NEW Function to open WhatsApp directly for product inquiry
+        function contactViaWhatsApp(productName) {
+            const phoneNumber = '212643489099'; // The number without the '+' sign for the URL
+            const prefilledText = encodeURIComponent(`Hello, I'm interested in the price for your product/service: ${productName}.`);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledText}`;
+            window.open(whatsappUrl, '_blank');
         }
 
         // Mobile Menu Toggle
